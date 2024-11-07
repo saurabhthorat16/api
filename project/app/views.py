@@ -2,7 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Item
-from .serializers import ItemSerializer
+from .Serializer import *
 
 @api_view(['GET', 'POST'])
 def item_list(request):
@@ -39,3 +39,6 @@ def item_detail(request, pk):
     elif request.method == 'DELETE':
         item.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+#for practice purpose
